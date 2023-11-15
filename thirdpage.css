@@ -1,0 +1,338 @@
+* 
+{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family:'Rubik', sans-serif  
+}
+a
+{
+   text-decoration: 0;
+   font-size: 13px;
+}
+/*Scrollbar CSS**/
+::-webkit-scrollbar
+{
+   width: 8px;
+}
+::-webkit-scrollbar-thumb
+{
+   background-color: #4f4f4f;
+   border-radius: 30px;
+}
+body{
+    font-family: 'Lato', sans-serif;
+}
+header
+{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 10px 5%;
+}
+header .logo
+{
+   display: flex;
+   align-items: center;
+}
+header .logo img
+{
+   width: 40px;
+   height: 40px;
+}
+header .logo h1
+{
+   font-size: "30px";
+   color: #4f4f4f;
+}
+.menu  
+{
+  display: flex;
+}
+.menu li 
+{
+   margin-left: 50px;
+   position: relative;
+   list-style: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: 0.5s;
+}
+.menu li a
+{
+   color: #999;
+   transition: 0.5s;
+}
+.menu li a:hover
+{
+   color: #53b758;
+   font-size: 15px;
+}
+.menu li:hover::after
+{
+   content: "";
+   position: absolute;
+   height: 30px;
+   z-index: -1;
+   width: 30px;
+   background-color: #f2f2f2;
+   border-radius: 50%;
+}
+.menu li:hover .dropdown-menu{
+   display: block;
+   position: absolute;
+   left: 0;
+   top: 100%;
+   order: 100;
+   z-index: 1000;
+   color: black;
+   
+}
+.dropdown-menu ul{
+   display: block;
+   margin: 10px;
+   background-color: rgba(255, 255, 255, 0.845);
+   border-radius: 10px;
+   z-index: 1000;
+   color: black;
+}
+.dropdown-menu ul li{
+   width: 150px;
+   padding: 10px;
+   margin-left: 0;
+   margin-right: 100%;
+   
+}
+.dropdown-menu{
+   display: none;
+}
+
+.number
+{
+   font-size: 14px;
+   color: #fff;
+   padding: 10px 25px;
+   background: linear-gradient(#53b758,#79BC23);
+   border-radius: 60px;
+}
+.top{
+    display: flex;
+    padding-left: 0;
+    padding-right: 0;
+    color: white;
+    
+}
+.top .maintop{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+
+}
+.top .maintop img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 999;
+    display: block;
+}
+.top .maintop .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15px; 
+    font-weight: bold; 
+    z-index: 999;
+    margin-bottom: 10px;
+    line-height: 50px;
+    
+}
+.contact{
+    display: flex;
+
+}
+.contact .textcontact{
+    text-align: left;
+    margin-left: 20px;
+    width: 45%;
+    margin-top: 50px;
+    justify-content: space-between;
+    
+}
+.contact .textcontact h1{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.contact .form{
+    background-color: #dfdbdb;
+    border-radius: 10px;
+    width: 65%;
+    display: block;
+    height: 100%;
+    margin-bottom: 15px;
+    margin-top: 50px;
+    padding-top: 20px;
+    justify-content: space-between;
+}
+input{
+    border-radius: 10px;
+    width: 30%;
+    margin-bottom: 20px;
+    margin-right: 160px;
+    height: 50px;
+    border: 1px solid #929191;
+    
+    border-color: #cdcbcb;
+    margin-left: 10px;
+    background-color: transparent;
+}
+textarea{
+    width: 800px;
+    margin-bottom: 20px;
+    border: 1px solid #929191;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: transparent;
+}
+#btn {
+    background-color: #4f4f4f;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+}
+@media (max-width:628px){
+    header .logo h1 {
+        font-size: 15px;
+    }
+    header .logo img {
+        width: 30px;
+        height: 30px;
+    }
+    header .menu {
+        display: none;
+    }
+    header .menu .dropdown-menu{
+       display: none;
+    }
+    .number {
+        display: none;
+    }
+    .home {
+        flex-direction: column-reverse;
+        height: fit-content;
+    }
+    .home .left , .home .right {
+        width: 100%;
+    }
+    .home .right {
+        height: 350px;
+    }
+    .home .left {
+        margin: 20px 0;
+    }
+    .home .left h1 {
+        font-size: 60px;
+    }
+    .home .left h4 {
+        font-size: 18px;
+    }
+    .home .left p {
+        font-size: 11px;
+    }
+    .title {
+        font-size: 19px;
+    }
+    .list_service .serv{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .list_about h1 {
+        font-size: 50px;
+    }
+    .list_about .description h3 {
+        font-size: 12px;
+    }
+    .list_about .description p {
+         font-size: 10px;
+    }
+    .form-image .image {
+        display: none;
+    }
+    .form-image form {
+        width: 100%;
+    }
+    footer {
+        font-size: 10px;
+    }
+    /*Responsive Menu*/
+    .small_menu {
+        display: flex;
+        width: 25px;
+        height: 25px;
+        align-items: center;
+        justify-content: space-between;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+    .small_menu span {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: 0.5s;
+    }
+    .small_menu span div {
+        height: 11px;
+        width: 11px;
+        background-color: #53b758;
+        border-radius: 6px ;
+    }
+    .small_menu.active{
+        justify-content: center;
+        align-items: unset;
+    }
+    .small_menu.active span:nth-child(1){
+        display: none;
+    }
+    .small_menu.active span {
+        display: flex;
+        flex-direction: unset;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s;
+    }
+    .small_menu.active span div{
+        height: 100%;
+        width: 3px;
+        border-radius: 6px;
+        transition: 0.5s;
+    }
+    .small_menu.active span div:nth-child(1){
+        transform: rotate(-45deg); 
+    }
+    header .menu.small{
+        display: flex;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: rgba( 255 255 255/0.9);
+        flex-direction: column;
+        width: 100%;
+        }
+        header .menu.small li {
+            margin: 15px 0;
+        }
+ 
+ }
+ footer
+{
+   background-color: #4f4f4f;
+   color: #fff;
+   text-align: center;
+   font-size: 14px;
+   padding: 10px;
+}
